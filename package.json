@@ -856,6 +856,7 @@
 		"mysql": "^2.18.1",
 		"mysqldump": "^3.1.0",
 		"node-xlsx": "^0.15.0",
+		"objectdiff": "^1.1.0",
 		"portfinder": "^1.0.26",
 		"pretty-bytes": "^5.3.0",
 		"sql-formatter": "^2.3.3",

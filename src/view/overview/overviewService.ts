@@ -1,12 +1,19 @@
-import { ViewManager } from "../viewManager";
-import { Node } from "../../model/interface/node";
-import { QueryUnit } from "../../service/queryUnit";
-import { ConnectionManager } from "../../service/connectionManager";
 import { Global } from "../../common/global";
+import { Node } from "../../model/interface/node";
+import { ConnectionManager } from "../../service/connectionManager";
+import { QueryUnit } from "../../service/queryUnit";
+import { ViewManager } from "../viewManager";
+const objectdiff = require('objectdiff')
 
 export class OverviewService {
 
-    public openOverview(node: Node) {
+    public async openOverview(node: Node) {
+
+        // TODO un implment
+        const o1 = { name: "cweijan", columns: [{ age: 20 }] }
+        const o2 = { name: "23423n", columns: [{ sex: 1 }] }
+        const diff = objectdiff.diff(o1, o2)
+
         ViewManager.createWebviewPanel({
             path: "app", splitView: false, title: "overview", singlePage: true,
             iconPath: Global.getExtPath("resources", "icon", "overview.svg"),
